@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #f7f7f2 0%, #e8e8e0 100%);
+        }
+        
+        .logo {
+            max-width: 120px;
+            transition: transform 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #8b26a4;
+        }
+        
+        .shop-now-btn {
+            background-color: #8b26a4;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .shop-now-btn:hover {
+            background-color: #6b1d7e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .hero-image {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero-text {
+            animation: slideIn 1s ease-out;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card {
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="py-4 shadow-sm">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="logo">
+                <img src="gambar/sneakers-logo-design-template-free-a15eea7aaaff43026d39b3c0ac5f4915_screen.jpg" alt="Shoes Store Logo" class="w-full">
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="https://wa.me/6285591253343?text=Saya%20tertarik%20dengan%20Produk%201%20yang%20dijual" 
+                   class="inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg focus:outline-none focus:ring" 
+                   target="_blank">
+                    Hubungi Admin
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section py-16">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 hero-image">
+                    <img src="gambar/pexels-joaquin-carfagna-3131171-17626392.jpg" alt="Organic Products" class="w-1/2 mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12 hero-text">
+                    <h2 class="text-xl text-indigo-600 mb-2 font-semibold">Berkualitas Harga Pas</h2>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Shoes Store</h1>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Toko Kami Menjual Produk Sepatu Dengan Bahan Berkualitas Dan Tentunya Harga Ramah Di Kantong</p>
+                    <a href="bahan awal.html" class="shop-now-btn inline-block">Belanja Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Features Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Mengapa Memilih Kami?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Kualitas Terjamin</h3>
+                        <p class="text-gray-600">Produk kami dipilih dengan teliti untuk memastikan kualitas terbaik</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Harga Bersaing</h3>
+                        <p class="text-gray-600">Dapatkan produk berkualitas dengan harga yang terjangkau</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pengiriman Cepat</h3>
+                        <p class="text-gray-600">Layanan pengiriman yang cepat dan aman ke seluruh Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Featured Products Section -->
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Produk Unggulan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="gambar/maria-fernanda-pissioli-gFrvwodhSco-unsplash-708x472.webp" alt="Featured Shoe 1" class="featured-image">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Converse Military</h3>
+                            <p class="text-gray-600 mb-4">Sepatu Converse Military ideal untuk mereka yang ingin tampil kasual namun dengan sentuhan maskulin dan tahan lama</p>
+                            <p class="text-lg font-bold text-indigo-600 mb-4">Rp 650.000</p>
+                        </div>
+                    </div>
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="gambar/sg-11134201-7rbkr-lnfhetrhrosi30.jpeg" alt="Featured Shoe 1" class="featured-image">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Nike Air Force 1</h3>
+                            <p class="text-gray-600 mb-4"> Nike Air Force 1 adalah ikon gaya dan performa yang pertama kali diperkenalkan pada tahun 1982 sebagai sepatu basket pertama yang menggunakan teknologi Nike Air</p>
+                            <p class="text-lg font-bold text-indigo-600 mb-4">Rp 950.000</p>
+                        </div>
+                    </div>
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="gambar/03-NEW-BALANCE-FFSSBNEW0-NEWWL574EVG-Grey.webp" alt="Featured Shoe 1" class="featured-image">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">New Balance</h3>
+                            <p class="text-gray-600 mb-4">New Balance 574 adalah sepatu ikonik yang menggabungkan gaya klasik dengan kenyamanan modern. Dirancang dengan material premium, sepatu ini menawarkan tampilan kasual yang stylish sekaligus fungsionalitas untuk penggunaan sehari-hari</p>
+                            <p class="text-lg font-bold text-indigo-600 mb-4">Rp 850.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100">
+        <div class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+          <div class="lg:flex lg:items-end lg:justify-between">
+            <div>
+              <div class="flex justify-center text-indigo-600 lg:justify-start font-bold text-2xl">
+                Shoes Store
+              </div>
+              <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
+                Pair your outfit with our shoes
+              </p>
+            </div>
+            <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </ul>
+          </div>
+          <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">
+            Copyright &copy; 2024. All rights reserved.
+          </p>
+        </div>
+    </footer>
+</body>
+</html>
